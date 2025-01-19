@@ -1,9 +1,10 @@
-import express ,{Request, Response} from "express";
+import express from "express";
+import userRoutes from  "./routes/userRoute";
+
 
 const app = express();
 const port = 3000;
-app.get("/", ( req: Request,res: Response)=>{
-    res.send("init project!");  
-});
+
+app.use("/api/user", userRoutes);
 
 app.listen(port);
