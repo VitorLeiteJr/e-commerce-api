@@ -2,7 +2,7 @@
 import {Request, Response} from "express";
 import { db } from "../lib/prisma";
 
-export const newUser = async (req: Request, res: Response) =>
+export const signup = async (req: Request, res: Response) =>
 {
     const {email,password,name} = await req.body;
     
