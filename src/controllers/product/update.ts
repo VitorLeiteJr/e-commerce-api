@@ -4,8 +4,6 @@ export const update = async(req: Request, res: Response)=>{
 
     const {id, name, description, price, stock} = req.body;
 
-  
-
     try{
         await db.products.updateMany({
             data:{

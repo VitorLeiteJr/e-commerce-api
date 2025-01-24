@@ -3,7 +3,7 @@ import { db } from "../../lib/prisma";
 
 
 
-export const deleteProduct = async(req: Request, res: Response)=>{
+export const remove = async(req: Request, res: Response)=>{
 
     const {id} = req.body;
 
