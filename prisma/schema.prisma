@@ -12,8 +12,6 @@ model User {
   email    String  @unique
   name     String
   password String
-  Cart     Cart?   @relation(fields: [cartId], references: [id])
-  cartId   String? @db.ObjectId
 }
 
 model products {
@@ -22,13 +20,11 @@ model products {
   name        String
   price       Int
   stock       Int
-  Cart        Cart?   @relation(fields: [cartId], references: [id])
-  cartId      String? @db.ObjectId
 }
 
 model Cart {
   id        String     @id @default(auto()) @map("_id") @db.ObjectId
-  userId    User[]
-  productId products[]
+  userId    String
+  productId String
   quantity  Int
 }

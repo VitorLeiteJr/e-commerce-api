@@ -1,7 +1,7 @@
-import {Request, Response} from "express"
+import { Request ,Response} from "express"
 import { db } from "../../lib/prisma";
 
-export const get = async (req: Request, res: Response  ) =>{
+export const get = async (req: Request,res: Response  ) =>{
 
     try{
        const all = await db.products.findMany();
