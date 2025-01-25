@@ -6,6 +6,6 @@ import { auth } from "../controllers/middleware/auth";
 const router = express.Router();
 
 router.post("/signup", signup);
-router.post("/login",auth, logIn);
+router.post("/login", logIn);
 
 export default router;
