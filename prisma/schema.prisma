@@ -20,6 +20,7 @@ model products {
   name        String
   price       Int
   stock       Int
+  priceId     String
 }
 
 model Cart {
