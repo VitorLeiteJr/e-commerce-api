@@ -4,7 +4,7 @@ import { db } from "../../lib/prisma";
 
 export const add = async (req: Request, res: Response) => {
 
-    const {name, description, price, stock} = req.body;
+    const {name, description, price, stock, priceId} = req.body;
 
     try{
 
@@ -13,7 +13,8 @@ export const add = async (req: Request, res: Response) => {
                 name,
                 description,
                 price,
-                stock
+                stock,
+                priceId
             }
         })
         res.send({status: true, message: "product added successfully!"})
