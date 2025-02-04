@@ -11,5 +11,6 @@ router.post("/signup", signup);
 router.post("/login", logIn);
 router.get("/get", auth,get);
 router.post("/update",auth,update)
+router.post("/auth", auth)
 
 export default router;
