@@ -18,8 +18,6 @@ export const logIn = async (req: Request, res: Response)=>{
     });
 
 
-    console.log(credentials)
-
     const match =  await bcrypt.compare(password, credentials.password);
 
     if(!match) {

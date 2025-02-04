@@ -11,6 +11,6 @@ const router = express.Router();
 router.post('/add', auth, add);
 router.post('/remove',auth, remove);
 router.post('/update',auth, update);
-router.get('/get',auth, get);
+router.get('/get', get);
 
 export default router;
