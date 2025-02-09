@@ -8,11 +8,11 @@ export const auth = async(req: Request, res: Response, next: NextFunction)=>{
     
     try{
         jwt.verify(token, 'secretkey');
-            if(req.path === "/auth") res.status(200).send({message: "you have authorization"});
+            if(req.path === "/auth") res.send({authorization: true, message: "you have authorization"});
             next();
 
     }catch{
-        res.status(401).send({message: "you do not have authorization"});
+        res.send({authorization: false, error: "you do not have authorization"});
     } 
 
 } 
